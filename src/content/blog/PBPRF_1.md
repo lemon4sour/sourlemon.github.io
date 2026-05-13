@@ -20,12 +20,12 @@ Note that I am not using `DragDetector` here, I chose not to because it just fel
 
 Additionally, these interactions are highlighted when you get your mouse *near* them on PC, or your character near them on Mobile. I built this system to be responsive so it adapts to the player's `PreferredInput`.
 
-![video](../../assets/videos/LeversAndValves.webm)
+![video](https://youtu.be/EzNPDi7-TxI)
 ## 2. Analog Replication Backend
 
 **TL;DR: Here is a demonstrative video of how the system works:**
 
- ![video](../../assets/videos/AnalogValueFramework.webm)
+ ![video](https://www.youtube.com/watch?v=li04xC7BwAU)
 
 This is one of my favorite features I've implemented in Roblox ever. It is essentially built for the levers and valves I mentioned above. The problem is that these are *analogous* interactions, unlike buttons, which are *digital*.
 
