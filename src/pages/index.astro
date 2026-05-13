@@ -1,9 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting.jsx';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
 const pageTitle = "Home Page";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <p>
+    Welcome to my page! Yeah I've got a page now. If there was anything page-y
+    in the world it would be this page from how much of a page it is.
+  </p>
+  <p>
+    Still got a lot to do, this is built from the tutorial I followed on Astro
+    docs so bear with me.
+  </p>
+  <p>Powered by Astro and GitHub Pages &lt;3</p>
 </BaseLayout>

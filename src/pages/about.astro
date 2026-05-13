@@ -1,58 +1,95 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About me";
 
-const identity = {
-  firstName: "SourLemon",
-  country: "Turkey",
-  occupation: "Computer Engineer",
-  hobbies: ["gaming", "movies", "writing", "tinkering"]
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "NeoVim", "Astro", "Java", "Embedded Systems", "IoT", "Linux", "SQL", "Rust", "Lua", "Scrum"]
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "NeoVim",
+  "Astro",
+  "Java",
+  "Embedded Systems",
+  "IoT",
+  "Linux",
+  "SQL",
+  "Rust",
+  "Lua",
+  "Scrum",
+];
 
 const happy = true;
 const finished = true;
 const goal = 3;
 
 const skillColor = "crimson";
-const fontWeight = "bold"
-const textCase = "uppercase"
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <h2>... and my new Astro site!</h2>
+  <p>
+    TL;DR: I'm a computer engineer, having an interest in anything that involves
+    computers while also interested in art.
+  </p>
 
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+  <p>
+    Ever since I was twelve, I had an interest with computers. How they manage
+    to cram such a complex world into a tiny box. First it was Scratch (yes, the
+    one with the orange cat!), then came Python, then along the way, I've
+    experimented and played around with various tools to end up where I am
+    today.
+  </p>
 
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+  <p>Here are some facts about me:</p>
+  <ul>
+    <li>
+      My pen name is Lemon/SourLemon. The name was based on a Steam username I
+      made when I was 10, still what I go by now.
+    </li>
+    <li>
+      I live in Turkey and I work as a computer engineer. The reason why that is
+      a broad title is because I don't have an actual job yet (TODO: update this
+      asap), yet I still enjoy being involved in literally anything that
+      involves computers.
+    </li>
+    <li>
+      I enjoy playing video games, specifically Factorio. Did I mention I'm an
+      engineer? I am also interested in Modded Minecraft, and would you be
+      surprised if I said my favorite modpack is GregTech: New Horizons?
+    </li>
+    <li>
+      I also enjoy indie creative works, whether video games, music, visual
+      arts, you will find me following either funny people or cool artists on
+      Twitter. (They are usually drowned out by a lot of shitposts, though. I
+      may open a second art just for art later but im lazyyy)
+    </li>
+    <li>
+      Funnest fact of all is that I'm not even done writing this page yet. There
+      is only so much you can put into one page, hence why I'm making a website
+      rather than a single page.
+    </li>
+  </ul>
+  <p>My skills are:</p>
+  <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+    .skill {
+      color: var(--skillColor);
+      font-weight: var(--fontWeight);
+      text-transform: var(--textCase);
+    }
+  </style>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
 
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-      {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-      } 
-    </ul>
-    <p>My skills are:</p> 
-    <style is:global define:vars={{skillColor, fontWeight, textCase}}>
-     h1 {
-       color: purple;
-       font-size: 4rem;
-     }
-     .skill {
-       color: var(--skillColor);
-       font-weight: var(--fontWeight);
-       text-transform: var(--textCase);
-     }
-    </style>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial</p>}
-
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  <p>
+    PS: I'm still trying to learn web dev as of writing. I'll never stop
+    learning and this time I got HTML on my plate. Which is the best programming
+    language btw!!!
+  </p>
 </BaseLayout>
