@@ -20,12 +20,13 @@ Note that I am not using `DragDetector` here, I chose not to because it just fel
 
 Additionally, these interactions are highlighted when you get your mouse *near* them on PC, or your character near them on Mobile. I built this system to be responsive so it adapts to the player's `PreferredInput`.
 
-![video](https://youtu.be/EzNPDi7-TxI)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EzNPDi7-TxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## 2. Analog Replication Backend
 
 **TL;DR: Here is a demonstrative video of how the system works:**
 
- ![video](https://www.youtube.com/watch?v=li04xC7BwAU)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/li04xC7BwAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This is one of my favorite features I've implemented in Roblox ever. It is essentially built for the levers and valves I mentioned above. The problem is that these are *analogous* interactions, unlike buttons, which are *digital*.
 
@@ -44,7 +45,7 @@ But how do we come up with a solution that respects immediate visual feedback? W
 
 Simply put, any client that is actively changing the value of an interactible is deemed the "owner", meaning any broadcast messages will not go to that client. We assume they already have the live version. In case of another player suddenly grabbing on the already held lever, the ownership is transferred, meaning they would receive update packets once again. To gracefully handle releasing ownership when one lets go of the lever, the client tells the server to revoke ownership, allowing changes to be broadcasted to the player once again.
 
-![image](./../../assets/images/AnalogReplicationGraph.png)
+![image](../../assets/images/AnalogReplicationGraph.png)
 
 In short, by applying throttling and replication to this system, we create a safe and lightweight framework that checks all three of these boxes. Expect this feature to be used in other analog stuff as well. Because of how elegant this framework is, I may make it a DevForum post in the future. It really is just that smart. Still, there is a bunch of stuff to improve, for example, a `NumberValue` is required for this to work, but we really could just have a tag based value replication instead of forcing `Instance` as indices.
 
