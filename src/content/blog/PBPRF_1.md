@@ -8,7 +8,7 @@ tags:
   - pbprf
   - pinewood-builders
 ---
-Welcome to the first ever dev log for Pinewood Builders Propulsion Research Facility! In this series, I aim to document the progress I've made on the game by showing some of the stuff I've implemented that I find to be significant enough for people to see.
+Welcome to the first ever dev log for the Roblox game "Pinewood Builders Propulsion Research Facility"! In this series, I aim to document the progress I've made on the game by showing some of the stuff I've implemented that I find to be significant enough for people to see.
 
 After years of anticipation with very bumpy roads along the way in the development of this game, I've decided to start this series so that people know the project is not dead, rather it's being worked on over time. That being said, I think it's time to showcase the stuff I've worked on.
 
@@ -23,6 +23,8 @@ Additionally, these interactions are highlighted when you get your mouse *near* 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EzNPDi7-TxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 2. Analog Replication Backend
+
+If you were a Level 2 Tester in our quality assurance group, you may have known about this system already. Speaking of which you should join Pinewood Builders Quality Assurance on Roblox if you want to be part of our public tests.
 
 **TL;DR: Here is a demonstrative video of how the system works:**
 
